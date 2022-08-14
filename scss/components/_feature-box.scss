@@ -1,0 +1,36 @@
+.feature-box {
+    width: calc(25% - 3rem);
+    text-align: center;
+    background: rgba($color-white, 0.8);
+    padding: 2.5rem;
+    border-radius: $border-radius;
+    box-shadow: 0 1.5rem 4rem rgba($color-black,.15);
+    transition: all .3s;
+
+    @include respond(tab-land) {
+        width: calc(45% - 4rem);
+    }
+
+    @include respond(tab-port) {
+        width: calc(48% - 4rem);
+        padding: 2rem;
+    }
+
+    @include respond(phone) {
+        width: 37rem;
+    }
+
+    &:hover {
+        transform: translateY(-1.5rem) scale(1.03);
+    }
+
+    &__icon {
+        margin: 1rem 0;
+
+        @include respond(tab-port) {
+            margin: 0; 
+        }
+    
+    }
+}
+    

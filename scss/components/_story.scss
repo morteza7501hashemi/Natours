@@ -1,0 +1,100 @@
+.story {
+    width: 75%;
+    text-align: left;
+    background-color: rgba($color-white, 0.6);
+    margin-bottom: $margin-bottom-big;
+    padding: 4rem;
+    padding-left: 7rem;
+    border-radius: $border-radius;
+    display: flex;
+    justify-content: center;
+    transform: skewX(-12deg);
+
+    @include respond(tab-port) {
+        width: 100%;
+        margin-bottom: $margin-bottom-medium-big;
+        padding: 3rem;
+        padding-left: 6rem;
+        align-items: center;
+        transform: skewX(0);
+    }
+
+    @include respond(phone) {
+        padding: 1.5rem;
+        align-items: center;
+        flex-flow: wrap column;
+    }
+
+    &__shape {
+        width: 15rem;
+        height: 15rem;
+        margin: 2rem 3rem 0 0;
+        clip-path: circle(50% at 50% 50%);
+        transform: skewX(11.99deg);
+        position: relative;
+
+        @include respond(tab-land) {
+            margin: 2rem 3rem 0 0;
+        }
+
+        @include respond(tab-port) {
+            margin: 2rem 3rem 2rem 0;
+            transform: skewX(0);
+        }
+
+        @include respond(phone) {
+            margin: 2rem 0rem;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        transform: scale(1.4);
+        transition: all .5s;
+    }
+
+    &:hover &__img {
+        filter: blur(3px) brightness(80%);
+        transform: scale(1);
+    }
+
+    &__caption {
+        color: $color-white;
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        text-align: center;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , 20%);
+        transition: all .5s;
+        
+    }
+
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50% , -50%);
+    }
+
+    &__text {
+        width: 80%;
+        transform: skewX(12deg);
+
+        @include respond(tab-port) {
+            transform: skewX(0);
+        }
+        
+        h3 {
+            text-transform: uppercase;
+            margin-bottom: $margin-bottom-small;
+
+            @include respond(phone) {
+                text-align: center;
+            }
+        }
+    }
+}

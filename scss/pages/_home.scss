@@ -1,0 +1,187 @@
+.about {
+    text-align: center;
+    background: $color-gray-light-1;
+    margin-top: -20vh;
+    padding: 25rem 0;
+  
+    @include respond(tab-port) {
+        padding: 15rem 0;
+        display: block;
+    }
+
+    @include respond(tab-port) {
+        padding: 25rem 0;
+    }
+    
+    &__container {
+        @include container-size;
+        padding: 0 7rem;
+        display: flex;
+        flex-flow: wrap row;
+        
+        @include respond(tab-port) {
+            padding: 0 9rem;
+            display: block;
+        }
+
+        @include respond(phone) {
+            padding: 0 5rem;
+        }
+    }
+
+    &__text-box {
+        width: calc(50% - 3rem);
+        text-align: left;
+        margin-right: 3rem;
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin: 0;
+            margin-bottom: $margin-bottom-big;
+
+            @include respond(tab-port) {
+                margin-bottom: $margin-bottom-medium-big;
+            }
+        }
+    }
+
+    &__img-box {
+        width: calc(50% - 3rem);
+        margin: 3rem 0 0 3rem;
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin: 0;
+            padding-top: 5rem;
+        }
+    }
+}
+
+.features {
+    text-align: center;
+    background: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light,.8),
+        rgba($color-primary-dark,.8)), 
+    url(../img/nat-4.jpg);
+    background-size: cover;
+    margin-top: -10rem;
+    padding: 20rem 4rem;
+    transform: skewY(-7deg);
+
+    @include respond(tab-port) {
+        padding: 10rem 4rem;
+    }
+
+    &__container {
+        @include container-size;
+        display: flex;
+        flex-flow: wrap row;
+        justify-content: center;
+        gap: 4rem;
+        transform: skewY(7deg);
+    }
+}
+
+.tours {
+    text-align: center;
+    background-color: $color-gray-light-1;
+    margin-top: -10rem;
+    padding: 30rem 5rem 15rem;
+
+    @include respond(tab-port) {
+        padding: 25rem 5rem 10rem;
+    }
+
+    &__container {
+        @include container-size;
+        margin-bottom: $margin-bottom-huge;
+        display: flex;
+        flex-flow: wrap row;
+        justify-content: space-between;
+        gap: 4rem 3rem;
+
+        @include respond(phone) {
+            justify-content: center;
+        }
+    }
+}
+
+.stories {
+    text-align: center;
+    padding: 15rem 6rem;
+    position: relative;
+
+    @include respond(tab-port) {
+        padding: 10rem 6rem;
+    }
+
+    &__container {
+        @include container-size;
+        @include center-with-flex;
+        flex-flow: wrap column;
+    }
+}
+
+.book {
+    background: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark);
+    padding: 15rem 5rem;
+
+    @include respond(tab-port) {
+        padding: 10rem;
+    }
+
+    @include respond(phone) {
+        padding: 10rem 5rem;
+    }
+
+    &__container {
+        @include container-size;
+        background: linear-gradient(105deg,
+            rgba($color-white,0.9) 50%,
+            transparent 50%),
+            url(../img/nat-10.jpg) no-repeat;
+        background-size: 100% 100%;
+        margin: 0 auto;
+        border-radius: $border-radius;
+        box-shadow: 0 1.5rem 4rem rgba($color-black,.2); 
+
+        @include respond(tab-land) {
+            background: linear-gradient(105deg,
+                rgba($color-white,0.9) 65%,
+                transparent 35%),
+                url(../img/nat-10.jpg);
+            background-size: cover;
+        }
+
+        @include respond(tab-port) {
+            width: 57rem;
+            background: linear-gradient(to right,
+                rgba($color-white,0.9) 0%,
+                rgba($color-white,0.9) 100%),
+                url(../img/nat-10.jpg);
+        }
+
+        @include respond(phone) {
+            width: 100%;
+        }
+    }
+
+    &__form {
+        width: 51%;
+        padding: 6rem;
+
+        @include respond(tab-land) {
+            width: 65%;
+        }
+
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+            padding: 5rem 3rem;
+        }
+    }
+}
