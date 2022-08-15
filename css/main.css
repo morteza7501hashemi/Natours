@@ -46,6 +46,7 @@
 
 html {
   font-size: 62.5%;
+  scrollbar-color: #55c57a #f7f7f7;
 }
 @media only screen and (max-width: 75em) {
   html {
@@ -656,6 +657,8 @@ body {
   transform: scale(0.25);
   position: relative;
   transition: all 0.5s 0.2s;
+  scrollbar-width: thin;
+  scrollbar-color: #2998ff #fff;
 }
 @media only screen and (max-width: 75em) {
   .popup__content {

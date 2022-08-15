@@ -37,6 +37,8 @@
             height: 95%;
         }
 
+        // Customize the scrollbar in chrome , edge and safari
+
         &::-webkit-scrollbar {
             width: 1rem;
         }
@@ -57,6 +59,10 @@
             border-radius: 1rem;
         }
 
+        // Customize the scrollbar in firefox
+
+        scrollbar-width: thin;
+        scrollbar-color: $color-tertiary-light $color-white;
     }
 
     &:target &__content {
